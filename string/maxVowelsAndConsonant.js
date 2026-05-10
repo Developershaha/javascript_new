@@ -1,7 +1,4 @@
 // find in the given string maximum vowels and consonants 
-
-
-
 function findVowelandConsonanats(s) {
     let map = {}; // take hashmap and know how to hashmap work internally 
 
