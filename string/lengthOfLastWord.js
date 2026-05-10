@@ -1,19 +1,41 @@
 function lengthOfLastWord(s) {
-    s = s.trim();
+    // s = s.trim();
+    // here we have use inbuit method but for a now don't use this use ur custom logic 
+
+    let length = s.length - 1;
+    let count = 0;
+
+    // remove space from the last 
+    while (length >= 0) {
+
+        if (s[length] === " " && count === 0) {
+            length--;
+        } else if (s[length] === " " && count > 0) {
+
+            return count;
+        }
+        else {
+            count++;
+            length--;
+        }
+       
+    }
+     return count;
+
 
     // solved using inbuilt method 
     // return s?.[s.length-1].length;
-    let count = 0;
 
-    for (let i = s.length - 1; i >= 0; i--) {
-        console.log(s[i] != " ");
-        if (s[i] != " ") {
-            count++;
-        } else {
-            return count;
-        }
-    }
-    return count;
+    // for (let i = length; i >= 0; i--) {
+    //     console.log(s[i] != " ");
+    //     if (s[i] != " ") {
+    //         count++;
+    //     } else {
+    //         return count;
+    //     }
+    // }
+    // return count;
 }
 
 console.log("length of the last word ", lengthOfLastWord("  fly me   to   the moon  "));
+console.log(lengthOfLastWord("hello"));
