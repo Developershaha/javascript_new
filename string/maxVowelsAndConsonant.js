@@ -17,14 +17,16 @@ function findVowelandConsonanats(s) {
     let vowel = ['a', 'e', 'i', 'o', 'u'];
     let vowelsMax = 0;
     let consonantsMax = 0;
-    for (let i = 0; i < s.length; i++) {
-        if (vowel.includes(s[i])) {
-            if (vowelsMax < map[s[i]]) {
-                vowelsMax = map[s[i]];
+
+    let mapKeys=Object.keys(map)
+    for (let i = 0; i < mapKeys.length; i++) {
+        if (vowel.includes(mapKeys[i])) {
+            if (vowelsMax < map[mapKeys[i]]) {
+                vowelsMax = map[mapKeys[i]];
             }
         } else {
-            if (consonantsMax < map[s[i]]) {
-                consonantsMax = map[s[i]];
+            if (consonantsMax < map[mapKeys[i]]) {
+                consonantsMax = map[mapKeys[i]];
             }
         }
 
