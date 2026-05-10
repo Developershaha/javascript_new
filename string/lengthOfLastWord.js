@@ -8,15 +8,15 @@ function lengthOfLastWord(s) {
     // remove space from the last 
     while (length >= 0) {
 
-        if(s[length] != " "){
+        if (s[length] != " ") {
             count++;
 
-        }else if(count > 0){
+        } else if (count > 0) {
             break;
         }
-       length--;
+        length--;
     }
-     return count;
+    return count;
 
 
     // solved using inbuilt method 
