@@ -5,11 +5,13 @@ function findVowelandConsonanats(s) {
 
     // store all the key in the map 
     for (let i = 0; i < s.length; i++) {
-        if (map[s[i]]) {
-            map[s[i]]++;
-        } else {
-            map[s[i]] = 1;
-        };
+
+        map[s[i]] = !map[s[i]] ? 1 : ++map[s[i]];
+        // if (map[s[i]]) {
+        //     map[s[i]]++;
+        // } else {
+        //     map[s[i]] = 1;
+        // };
 
     }
 
@@ -18,7 +20,8 @@ function findVowelandConsonanats(s) {
     let vowelsMax = 0;
     let consonantsMax = 0;
 
-    let mapKeys=Object.keys(map)
+    let mapKeys = Object.keys(map);
+    console.log("mapKeys", mapKeys);
     for (let i = 0; i < mapKeys.length; i++) {
         if (vowel.includes(mapKeys[i])) {
             if (vowelsMax < map[mapKeys[i]]) {
