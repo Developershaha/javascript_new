@@ -1,18 +1,15 @@
 // in js have inbuild stack oky 
 
-const queuestack=[];
-queue.push(1); // enqueue
+const queue=[];
+queue.push(1);
 queue.push(5);
 queue.push(8);
-queue.push(23);
+stack.push(23);
 
-console.log(queue); 
+console.log(stack); 
 
-queue.shift(); // dequeue -means remove from 
-console.log(queue);
-
-// front elemetn 
-let front = queue[0];
+stack.pop();
+console.log(stack);
 const top=stack[stack.length-1];
 
 // top element or peek element 
