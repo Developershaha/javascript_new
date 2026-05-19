@@ -13,6 +13,6 @@ console.log(stack);
 const top=stack[stack.length-1];
 
 // top element or peek element 
-console.log("top element",top);
+console.log("top element",top);  
 
 // stack[3]. // invalid operation but in js it work because internally uses array 
