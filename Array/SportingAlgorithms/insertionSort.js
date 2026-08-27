@@ -7,7 +7,7 @@ for(let i=1;i<arr.length;i++){
     let prev=i-1;
 
     // this is used for swap an dits insertion algorithm oky - loday agend learn all the sorting algorithm oky 
-    while(arr[prev]>curr && prev>=0){
+    while(prev>=0 &&arr[prev]>curr ){
         arr[prev+1]=arr[prev];
         prev--;
     }
